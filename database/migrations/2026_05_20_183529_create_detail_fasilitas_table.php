@@ -15,9 +15,9 @@ return new class extends Migration
 
             $table->string('id_detail_fasilitas', 5)->primary();
 
-            $table->string('id_kos', 5);
+            $table->string('id_kos', 5); //(FK)
 
-            $table->string('id_fasilitas', 5);
+            $table->string('id_fasilitas', 5); //(FK)
 
             $table->text('keterangan')->nullable();
 

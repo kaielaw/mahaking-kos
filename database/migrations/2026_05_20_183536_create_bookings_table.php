@@ -17,9 +17,9 @@ return new class extends Migration
 
             $table->string('kode_booking', 20);
 
-            $table->string('id_user', 5);
+            //$table->string('id_user', 5); (FK)
 
-            $table->string('id_kamar', 5);
+            //$table->string('id_kamar', 5); (FK)
 
             $table->date('tanggal_booking');
 

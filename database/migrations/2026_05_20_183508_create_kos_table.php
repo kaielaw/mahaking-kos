@@ -15,9 +15,9 @@ return new class extends Migration
 
             $table->string('id_kos', 5)->primary();
 
-            $table->string('id_pemilik', 5);
+            //$table->string('id_pemilik', 5); (FK)
 
-            $table->string('id_lokasi', 5);
+            //$table->string('id_lokasi', 5); (FK)
 
             $table->string('nama_kos', 100);
 
