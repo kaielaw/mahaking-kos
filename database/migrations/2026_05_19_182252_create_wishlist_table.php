@@ -15,10 +15,10 @@ return new class extends Migration
             $table->string('id_favorit', 5)->primary();
 
             $table->string('id_user', 5);
-            // $table->foreign('id_user')->references('id_user')->on('users');
+            $table->foreign('id_user')->references('id_user')->on('users');
 
             $table->string('id_kos', 5);
-            // $table->foreign('id_kos')->references('id_kos')->on('kos');
+            $table->foreign('id_kos')->references('id_kos')->on('kos');
             
             $table->timestamps();
         });

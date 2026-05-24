@@ -15,9 +15,11 @@ return new class extends Migration
 
             $table->string('id_detail_fasilitas', 5)->primary();
 
-            $table->string('id_kos', 5); //(FK)
+            $table->string('id_kos', 5);
+            $table->foreign('id_kos')->references('id_kos')->on('kos');
 
-            $table->string('id_fasilitas', 5); //(FK)
+            $table->string('id_fasilitas', 5);
+            $table->foreign('id_fasilitas')->references('id_fasilitas')->on('fasilitas');
 
             $table->text('keterangan')->nullable();
 

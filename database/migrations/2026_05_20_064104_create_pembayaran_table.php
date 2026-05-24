@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('id_pembayaran', 5)->primary();
 
             $table->string('id_booking', 5);
-            // $table->foreign('id_booking')->references('id_booking')->on('booking');
+            $table->foreign('id_booking')->references('id_booking')->on('booking');
 
             $table->string('metode_pembayaran', 50);
             $table->string('nama_bank', 50);

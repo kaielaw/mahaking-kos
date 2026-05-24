@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('pemilik_kos', function (Blueprint $table) {
             $table->string('id_pemilik', 5)->primary();
+            
             $table->string('id_user', 5);
-            // $table->foreign('id_user')->references('id_user')->on('user');
+            $table->foreign('id_user')->references('id_user')->on('user');
 
             $table->string('nama_depan', 50);
             $table->string('nama_belakang', 50);
