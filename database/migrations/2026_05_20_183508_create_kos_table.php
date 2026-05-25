@@ -13,11 +13,13 @@ return new class extends Migration
     {
         Schema::create('kos', function (Blueprint $table) {
 
-            $table->string('id_kos', 5)->primary();
+            $table->string('id_kos', 5)->primary(); //PK
 
-            $table->string('id_pemilik', 5); // (FK)
+            $table->string('id_pemilik', 5);
+            $table->foreign('id_pemilik')->references('id_pemilik')->on('pemilik_kos'); //FK
 
-            $table->string('id_lokasi', 5); // (FK)
+            $table->string('id_lokasi', 5);
+            $table->foreign('id_lokasi')->references('id_lokasi')->on('lokasi'); //FK
 
             $table->string('nama_kos', 100);
 
@@ -33,9 +35,9 @@ return new class extends Migration
                 'campur'
             ]);
 
-            $table->integer('harga_min');
+            $table->decimal('harga_min', 12, 2);
 
-            $table->integer('harga_max');
+            $table->decimal('harga_max', 12, 2);
 
             $table->integer('jumlah_kamar');
 

@@ -15,15 +15,13 @@ return new class extends Migration
 
             $table->string('id_booking', 5)->primary();
 
-            $table->string('kode_booking', 20);
-
             $table->string('id_user', 5);
             $table->foreign('id_user')->references('id_user')->on('users');
 
             $table->string('id_kamar', 5);
             $table->foreign('id_kamar')->references('id_kamar')->on('kamar');
 
-            $table->date('tanggal_booking');
+            $table->datetime('tanggal_booking');
 
             $table->date('tanggal_masuk');
 
@@ -31,7 +29,7 @@ return new class extends Migration
 
             $table->integer('durasi_sewa');
 
-            $table->integer('total_harga');
+            $table->decimal('total_harga', 12, 2);
 
             $table->enum('status_booking', [
                 'pending',
