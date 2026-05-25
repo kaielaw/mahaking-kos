@@ -19,6 +19,18 @@ return new class extends Migration
             $table->text('komentar');
             $table->dateTime('tanggal_review');
             $table->timestamps();
+
+        //     Foreign Key ke users
+        //     $table->foreign('id_user')
+        //           ->references('id_user')
+        //           ->on('users')
+        //           ->onDelete('cascade');
+
+        //     Foreign Key ke kosts
+        //     $table->foreign('id_kost')
+        //           ->references('id_kost')
+        //           ->on('kosts')
+        //           ->onDelete('cascade');
         });
     }
 

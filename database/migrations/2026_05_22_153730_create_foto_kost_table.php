@@ -23,6 +23,11 @@ return new class extends Migration
 
             $table->timestamps();
 
+        // Foreign Key
+        //     $table->foreign('id_kost')
+        //           ->references('id_kost')
+        //           ->on('kosts')
+        //           ->onDelete('cascade');
         });
     }
 

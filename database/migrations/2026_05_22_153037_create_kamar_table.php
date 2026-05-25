@@ -22,6 +22,10 @@ return new class extends Migration
             $table->string('ketersediaan_kamar');
             $table->timestamps();
 
+            // $table->foreign('id_kost')
+            // ->references('id_kost')
+            // ->on('kosts')
+            // ->onDelete('cascade');
         });
     }
 
