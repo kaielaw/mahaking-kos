@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Fasilitas extends Model
+class FotoKos extends Model
 {
     /* TABLE CONFIGURATION */
     // Nama tabel
-    protected $table = 'fasilitas';
+    protected $table = 'foto_kos';
 
     // Primary key
-    protected $primaryKey = 'id_fasilitas';
+    protected $primaryKey = 'id_foto';
 
     // PK bukan auto increment
     public $incrementing = false;
@@ -21,14 +21,16 @@ class Fasilitas extends Model
 
     /* MASS ASSIGNMENT */
     protected $fillable = [
-        'id_fasilitas',
-        'nama_fasilitas'
+        'id_foto',
+        'id_kos',
+        'url_foto',
+        'caption'
     ];
 
     /* RELATIONSHIP */
-    // Fasilitas memiliki banyak detail fasilitas
-    public function detailFasilitas()
+    // Foto kos dimiliki oleh satu kos
+    public function kos()
     {
-        return $this->hasMany(DetailFasilitas::class, 'id_fasilitas');
+        return $this->belongsTo(Kos::class, 'id_kos');
     }
 }
