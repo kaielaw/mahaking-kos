@@ -7,11 +7,13 @@
 </head>
 <body>
 
-    <h1>Mahaking Kos</h1>
+    @include('layouts.navbar')
 
-    <hr>
+    <main>
+        @yield('content')
+    </main>
 
-    @yield('content')
+    @include('layouts.footer')
 
 </body>
 </html>

@@ -13,4 +13,11 @@ class KosController extends Controller
 
         return view('kos.index', compact('dataKos'));
     }
+
+    public function show($id)
+    {
+        $kos = Kos::findOrFail($id);
+
+        return view('kos.detail', compact('kos'));
+    }
 }
