@@ -9,3 +9,20 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+.hero-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.poppins-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-font {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.logo-font {
+    font-family: 'Kaisei Opti', serif;
+}
